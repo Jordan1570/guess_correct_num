@@ -14,10 +14,9 @@ while input("Wanna play the number guessing game? (y or n) ==> ").upper() == "Y"
     num_of_guesses = 0
 
     while (not num_guessed and num_of_guesses < max_num_of_guesses):
-        # max_num_of_guesses = max_num_of_guesses - 1
         # Store users guess in variable
         my_guess = int(input(f"Guess a number between 0 and {largest_guess_possible} ==> "))
-        # if the user's guess is not greater than 0 or less than biggest_num continue
+
         if (my_guess < 0 and my_guess > largest_guess_possible):
             print(f"{my_guess} is an invalid entry...  try again\n")
             # Don't count this iteration
@@ -36,6 +35,7 @@ while input("Wanna play the number guessing game? (y or n) ==> ").upper() == "Y"
             print(f"You have {max_num_of_guesses - num_of_guesses} guesses left")
 
         elif (my_guess == num_to_guess):
+            # set num_guessed to true 
             num_guessed = True
             print(f"You found the number {num_to_guess}\nAnd it took you {num_of_guesses} guesses to get it")
 
